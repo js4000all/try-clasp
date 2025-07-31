@@ -1,0 +1,8 @@
+services:
+  dev:
+    build:
+      context: ./.devcontainer
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/usr/src/app # ローカルをコンテナ内にマウント
+    command: sleep infinity
