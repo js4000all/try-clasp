@@ -13,7 +13,8 @@ RUN set -x \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/* \
   && npm i -g npm@latest \
-  && npm i -g @google/clasp @types/google-apps-script \
+  && npm i -g typescript @google/clasp \
+  && npm i -g rollup \
   && npm i -g @google/gemini-cli
 
 ENV LESSCHARSET=utf-8
