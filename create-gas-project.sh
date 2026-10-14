@@ -56,6 +56,7 @@ cat > tsconfig.json <<'EOF'
   "compilerOptions": {
     "target": "ES2019",
     "module": "ESNext",
+    "moduleResolution": "bundler",
     "rootDir": "src",
     "strict": true,
     "sourceMap": true,
@@ -75,6 +76,7 @@ export default {
   output: {
     dir: "build",
     format: "iife",
+    name: "GasBundle",
     preserveModules: false,
     indent: "  ",
     sourcemap: true,
@@ -103,7 +105,7 @@ EOF
 
 # 開発依存関係のインストール
 pnpm add -D \
-  typescript \
+  typescript@6 \
   rollup \
   @rollup/plugin-typescript \
   @types/google-apps-script \
