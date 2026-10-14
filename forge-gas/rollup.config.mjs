@@ -12,6 +12,7 @@ export default {
     preserveModules: false,
     indent: "  ",
     sourcemap: true,
+    intro: "var self = globalThis;",
   },
   plugins: [
     resolve({
