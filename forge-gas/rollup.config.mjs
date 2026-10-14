@@ -1,5 +1,7 @@
 import ts from "@rollup/plugin-typescript";
 import gas from "rollup-plugin-gas";
+import resolve from "@rollup/plugin-node-resolve";
+import commonjs from "@rollup/plugin-commonjs";
 
 export default {
   input: "src/main.ts",
@@ -12,6 +14,11 @@ export default {
     sourcemap: true,
   },
   plugins: [
+    resolve({
+      browser: true,
+      preferBuiltins: false,
+    }),
+    commonjs(),
     ts({ tsconfig: "./tsconfig.json" }),
     gas(),
   ],
