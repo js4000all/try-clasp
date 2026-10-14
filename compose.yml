@@ -8,3 +8,4 @@ services:
     volumes:
       - ./:/usr/src/app # ローカルをコンテナ内にマウント
     command: sleep infinity
+    init: true
