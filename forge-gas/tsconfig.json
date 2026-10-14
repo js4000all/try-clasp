@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "ES2019",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "rootDir": "src",
+    "strict": true,
+    "sourceMap": true,
+    "types": ["google-apps-script"]
+  },
+  "include": ["src/**/*.ts"]
+}
